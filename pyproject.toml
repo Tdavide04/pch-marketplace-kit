@@ -1,0 +1,23 @@
+[project]
+name = "pch-marketplace-kit"
+version = "0.1.0"
+description = "Contract, rate-limited HTTP client and test helpers shared by Personal Collection Hub and its Marketplace adapters"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.13"
+dependencies = [
+    "requests>=2.32",
+]
+
+[build-system]
+requires = ["uv_build>=0.9,<0.14"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
